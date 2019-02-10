@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   width: 100%;
   height: 100%;
@@ -25,11 +26,16 @@ main {
 }
 
 div, header {
+  overflow: hidden;
   color: #FFFFFA;
   position: absolute;
-  border: 2px solid #FFFFFA;
+  border: 2px solid #cacaca;
   transform: rotate(30deg);
   transition: background-color 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.jobTitle {
+  z-index: 2;
 }
 
 header {
@@ -43,22 +49,24 @@ header {
 }
 header .content {
   text-align: center;
-  margin-left: 103px;
-  margin-top: 250px;
+  margin-left: 16px;
+  margin-top: 225px;
   border: none;
+  width: 400px;
   transform: rotate(-30deg);
 }
 header .content .resume-download {
+  cursor: pointer;
   padding: 5px 10px;
   border: 2px solid #FFFFFA;
   color: #FFFFFA;
   background-color: transparent;
   outline: none;
-  transition: background-color 0.5s;
+  transition: background-color 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 header .content .resume-download p, header .content .resume-download img {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 header .content .resume-download p {
   margin: 0px;
@@ -70,7 +78,13 @@ header .content .resume-download img {
 }
 header .content .resume-download:hover {
   background-color: #26547b;
+  box-shadow: -1px 5px 20px 3px #26547b;
+  -webkit-box-shadow: -1px 5px 20px 3px #26547b;
 }
+header .content .resume-download:active {
+  background-color: black;
+}
+
 .contact {
   width: 400px;
   height: 400px;
@@ -87,6 +101,9 @@ header .content .resume-download:hover {
   box-shadow: inset 0 0 20px 9px #73252b;
   -webkit-box-shadow: inset 0 0 20px 9px #73252b;
 }
+.contact:active {
+  background-color: #73252b;
+}
 
 .resume {
   width: 300px;
@@ -99,9 +116,12 @@ header .content .resume-download:hover {
   margin-left: 75px;
 }
 .resume:hover {
-  background-color: #944BBB;
-  box-shadow: inset 0 0 20px 9px #5e1a82;
-  -webkit-box-shadow: inset 0 0 20px 9px #5e1a82;
+  background-color: #531CB3;
+  box-shadow: inset 0 0 20px 9px #2b0869;
+  -webkit-box-shadow: inset 0 0 20px 9px #2b0869;
+}
+.resume:active {
+  background-color: #2b0869;
 }
 
 .project {
@@ -120,6 +140,9 @@ header .content .resume-download:hover {
   box-shadow: inset 0 0 20px 9px #a75525;
   -webkit-box-shadow: inset 0 0 20px 9px #a75525;
 }
+.project:active {
+  background-color: #a75525;
+}
 
 .blog {
   width: 300px;
@@ -133,13 +156,17 @@ header .content .resume-download:hover {
   transform: rotate(-30deg);
 }
 .blog:hover {
-  background-color: #531CB3;
-  box-shadow: inset 0 0 20px 9px #2b0869;
-  -webkit-box-shadow: inset 0 0 20px 9px #2b0869;
+  background-color: #944BBB;
+  box-shadow: inset 0 0 20px 9px #5e1a82;
+  -webkit-box-shadow: inset 0 0 20px 9px #5e1a82;
+}
+.blog:active {
+  background-color: #5e1a82;
 }
 
 .extra {
   display: none;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 400px) {
@@ -248,12 +275,16 @@ header .content .resume-download:hover {
     top: -247px;
   }
   header .content {
+    width: 700px;
     font-size: 26px;
-    margin-left: 272px;
+    margin-left: 151px;
     margin-top: 328px;
   }
   header .content .resume-download {
     font-size: 18px;
+  }
+  header .content .resume-download p, header .content .resume-download img {
+    vertical-align: bottom;
   }
 
   .contact {
@@ -299,8 +330,8 @@ header .content .resume-download:hover {
     left: -130px;
   }
   .blog h2 {
-    margin-top: 72px;
-    margin-left: 178px;
+    margin-top: 76px;
+    margin-left: 137px;
   }
 
   .extra {
@@ -310,4 +341,21 @@ header .content .resume-download:hover {
     top: 520px;
     left: 830px;
   }
+  .extra:hover {
+    background-color: #ADF6B1;
+    box-shadow: inset 0 0 20px 9px #60a264;
+    -webkit-box-shadow: inset 0 0 20px 9px #60a264;
+  }
 }
+@media only screen and (min-width: 1150px) {
+  .blog h2 {
+    margin-top: 111px;
+    margin-left: 174px;
+  }
+
+  .project h2 {
+    margin-top: 170px;
+  }
+}
+/* Copyright © 2019 */
+/* Created By: Wahhaaj Davids */
