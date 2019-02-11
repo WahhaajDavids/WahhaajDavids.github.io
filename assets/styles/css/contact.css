@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   width: 100%;
   height: 100%;
@@ -46,21 +47,27 @@ main .plate .Contact-info img, main .plate .Contact-info p {
   vertical-align: middle;
   display: inline-block;
 }
+main .plate .Contact-info a {
+  color: white;
+}
+main .plate .Contact-info a p {
+  text-decoration: underline;
+}
+main .plate .Contact-info .external {
+  vertical-align: super;
+  width: 17px;
+  height: 17px;
+}
 main .plate .Contact-info img {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 700px) {
-  main .plate {
-    font-size: 20px;
+  main {
+    font-size: 18px;
   }
-  main .plate h1 {
-    margin: 0;
-    padding: 20px 0;
-  }
-}
-@media only screen and (min-width: 700px) {
   main .plate {
     width: 600px;
     height: 100vh;
@@ -74,3 +81,5 @@ main .plate .Contact-info img {
     padding-left: 100px;
   }
 }
+/* Copyright © 2019 */
+/* Created By: Wahhaaj Davids */

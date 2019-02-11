@@ -1,6 +1,4 @@
 html{
-  width: 100%;
-  height: 100%;
   background-color: #000000db;//#000000d1;
   background-image: url("../../images/index-bg.jpeg");
   background-blend-mode: darken;
@@ -16,69 +14,80 @@ body{
 }
 
 main{
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
   .home{
     width: 30px;
     height: 30px;
-    position: fixed;
+    position: absolute;
     top: 15px;
     left: 15px;
   }
   .plate{
     margin: 8vh 0;
-    height: 83vh;
-    padding: 0 10px;
-    background-color: #E63946;
-    box-shadow: inset 0 0 20px 3px #73252b;
-    -webkit-box-shadow: inset 0 0 20px 3px #73252b;
+    padding: 10px;
+    background-color: #F79256;
+    box-shadow: inset 0 0 20px 9px #a75525;
+    -webkit-box-shadow: inset 0 0 20px 9px #a75525;
     border-top: 2px solid #cacaca;
     border-bottom: 2px solid #cacaca;
     h1{
       margin: 0;
       padding: 10px 0;
     }
-    .Contact-info{
-      img,p{
-        vertical-align: middle;
-        display: inline-block;
-      }
-      a{
-        color: white;
-        p{
-          text-decoration: underline;
-        }
-      }
-      .external{
-        vertical-align: super;
-        width: 17px;
-        height: 17px;
-      }
+    h2{
+      margin: 0;
+      padding: 15px 0;
+    }
+    figure{
+      width: 100%;
+      margin: 5px 0;
+      overflow: hidden;
+      background-color: black;
       img{
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
+      width: 100%;
       }
     }
   }
 }
 
-
 @media only screen and (min-width:700px) {
   main{
     font-size: 18px;
+    .home{
+      position: fixed;
+    }
     .plate{
-      width: 600px;
-      height: 100vh;
+      width: 80vw;
       border: none;
       border-left: 2px solid #cacaca;
       border-right: 2px solid #cacaca;
-
       margin: auto;
-      padding: 20vh 20px;
-      h1,.Contact-info{
-        padding-left: 100px;
+      padding: 20px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+@media only screen and (min-width:1024px) {
+  main{
+    .plate{
+      max-width: 1224px;
+      h1,h2,p{
+        padding-left: 5px;
+      }
+      figure{
+        display: inline-block;
+        margin: 5px;
+        width: 48%;
+        overflow: hidden;
+        img{
+        width: 100%;
+        opacity: .5;
+        transition: opacity .5s;
+
+        &:hover{
+          opacity: 1;
+        }
+        }
       }
     }
   }
